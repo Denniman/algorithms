@@ -20,10 +20,11 @@ function timeConversion(s) {
     return `00:${minutes}:${seconds}`;
   }
 
-  return `${hourStr}:${minutes}:${seconds}AM`;
+  return `${hourStr}:${minutes}:${seconds}`;
 }
 
 console.log(timeConversion("07:05:45PM"));
 console.log(timeConversion("07:15:45AM"));
 console.log(timeConversion("12:01:00PM"));
 console.log(timeConversion("12:01:00AM"));
+console.log(timeConversion("04:59:59AM"));
