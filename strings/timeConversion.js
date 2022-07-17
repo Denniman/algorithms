@@ -14,13 +14,11 @@ function timeConversion(s) {
       return `${hourStr}:${minutes}:${seconds}`;
     }
     return `${Number(hourStr) + 12}:${minutes}:${seconds}`;
-  }
-
-  if (timeStr === "AM" && Number(hourStr) > 11) {
+  } else if (timeStr === "AM" && Number(hourStr) > 11) {
     return `00:${minutes}:${seconds}`;
+  } else {
+    return `${hourStr}:${minutes}:${seconds}`;
   }
-
-  return `${hourStr}:${minutes}:${seconds}`;
 }
 
 console.log(timeConversion("07:05:45PM"));
