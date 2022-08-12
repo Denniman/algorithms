@@ -22,6 +22,9 @@ const lengthOfLongestSubstring = (s) => {
   return longestStr;
 };
 
+// TODO
+// Refactor this challenge to pass all test cases
+
 console.log(lengthOfLongestSubstring("abcabcbb")); //3
 console.log(lengthOfLongestSubstring("bbbbb")); //1
 console.log(lengthOfLongestSubstring("pwwkew")); //3
