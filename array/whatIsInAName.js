@@ -11,12 +11,10 @@
 
 const whatIsInAName = (collection, source) => {
   const souceKeys = Object.keys(source);
+
   return collection.filter((obj) => {
     for (let i = 0; i < souceKeys.length; i++) {
-      if (
-        !obj.hasOwnProperty(souceKeys[i]) ||
-        obj[souceKeys[i]] !== source[souceKeys[i]]
-      ) {
+      if (!obj[souceKeys[i]] || obj[souceKeys[i]] !== source[souceKeys[i]]) {
         return false;
       }
     }
@@ -24,16 +22,22 @@ const whatIsInAName = (collection, source) => {
   });
 };
 
-whatIsInAName(
-  [{ apple: 1, bat: 2 }, { bat: 2 }, { apple: 1, bat: 2, cookie: 2 }],
-  { apple: 1, bat: 2, cookie: 2 }
+console.log(
+  whatIsInAName(
+    [{ apple: 1, bat: 2 }, { bat: 2 }, { apple: 1, bat: 2, cookie: 2 }],
+    { apple: 1, bat: 2, cookie: 2 }
+  )
 );
 
-whatIsInAName(
-  [
-    { first: "Romeo", last: "Montague" },
-    { first: "Mercutio", last: null },
-    { first: "Tybalt", last: "Capulet" },
-  ],
-  { last: "Capulet" }
+console.log(
+  whatIsInAName(
+    [
+      { first: "Romeo", last: "Montague" },
+      { first: "Mercutio", last: null },
+      { first: "Tybalt", last: "Capulet" },
+    ],
+    { last: "Capulet" }
+  )
 );
+
+console.log(whatIsInAName([{ a: 1, b: 2, c: 3 }], { a: 1, b: 9999, c: 3 }));
