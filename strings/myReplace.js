@@ -1,3 +1,9 @@
+/**
+ * @description takes a string and replaces it with a passed in string argument.
+ * @param {string} string
+ * @return  string
+ */
+
 const myReplace = (str, before, after) => {
   const capitalLetter = `${after[0].toUpperCase()}${after.substring(1)}`;
   const lowerLetter = after.toLowerCase();
