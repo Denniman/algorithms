@@ -5,7 +5,7 @@ const twoCrystalBall = (arr) => {
   const jumpAmount = Math.floor(Math.sqrt(arr.length));
 
   let i = jumpAmount;
-  console.log("One", i);
+
   for (; i < arr.length; i += jumpAmount) {
     if (arr[i]) {
       break;
