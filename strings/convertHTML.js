@@ -1,3 +1,9 @@
+/**
+ * @description Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities.
+ * @param {string} string
+ * @return  string
+ */
+
 function convertHTML(str) {
   const htmlEntities = {
     "&": "&amp;",
