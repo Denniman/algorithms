@@ -1,3 +1,9 @@
+/**
+ * @description Given a positive integer num, this function returns the sum of all odd Fibonacci numbers that are less than or equal to num
+ * @params integer
+ * @returns integer
+ */
+
 function sumFibs(num) {
   let sum = 0;
   let prevNumber = 0,
