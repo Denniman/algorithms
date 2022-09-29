@@ -1,3 +1,9 @@
+/**
+ * @description returns the sum of all prime numbers that are less than or equal to num.
+ * @params integer
+ * @returns integer
+ */
+
 function sumPrimes(num) {
   function isPrime(num) {
     for (let i = 2; i <= Math.sqrt(num); i++) {
