@@ -12,7 +12,6 @@ function sumPrimes(num) {
     return true;
   }
 
-  // Check all numbers for primality
   let sum = 0;
   for (let i = 2; i <= num; i++) {
     if (isPrime(i)) sum += i;
