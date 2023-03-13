@@ -6,7 +6,7 @@
 
 // OPTIMAL SOLUTION
 function isPangram(string) {
-  const char = string.replace(/[^a-z]/gi, "").toLowerCase();
+  const chars = string.replace(/[^a-z]/gi, "").toLowerCase();
   const alphabetsObj = {};
   const stringObj = {};
 
@@ -14,7 +14,7 @@ function isPangram(string) {
     alphabetsObj[String.fromCharCode(index)] = 1;
   }
 
-  for (const letter of char) {
+  for (const letter of chars) {
     stringObj[letter] = stringObj[letter] + 1 || 1;
   }
 
